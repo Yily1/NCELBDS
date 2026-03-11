@@ -37,15 +37,7 @@ while($row = mysqli_fetch_assoc($logs_query)) {
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <h2>Admin Dashboard</h2>
-
-<!-- Action Buttons -->
-<div style="margin-bottom:20px; text-align:center;">
-    <!-- Manage Users first -->
-    <a href="manage_users.php" style="display:inline-block; padding:8px 15px; background:#4CAF50; color:white; border-radius:5px; text-decoration:none; margin-right:10px;">Manage Users</a>
-    
-    <!-- Logout second -->
-    <a href="../auth/logout.php" style="display:inline-block; padding:8px 15px; background:#f44336; color:white; border-radius:5px; text-decoration:none;">Logout</a>
-</div>
+<a href="../auth/logout.php" class="logout-btn" style="margin-bottom:20px; display:inline-block;">Logout</a>
 
 <!-- Statistics Cards -->
 <div class="cards" style="display:flex; gap:20px; margin:20px 0;">
@@ -80,6 +72,7 @@ while($row = mysqli_fetch_assoc($logs_query)) {
 // PHP data to JS
 const chickenDates = <?php echo json_encode($chicken_dates); ?>;
 const chickenCounts = <?php echo json_encode($chicken_counts); ?>;
+
 const usernames = <?php echo json_encode($usernames); ?>;
 const logsCounts = <?php echo json_encode($logs_counts); ?>;
 
